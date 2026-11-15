@@ -1,0 +1,214 @@
+{
+  "classes": [
+    "Low",
+    "Average",
+    "High"
+  ],
+  "groups": {
+    "Demographic": [
+      "address",
+      "Medu",
+      "Mjob",
+      "Fjob",
+      "guardian"
+    ],
+    "Academic": [
+      "G1",
+      "G2",
+      "failures",
+      "schoolsup",
+      "higher"
+    ],
+    "Social": [
+      "famrel",
+      "freetime",
+      "goout",
+      "activities",
+      "internet"
+    ],
+    "Behavioural": [
+      "studytime",
+      "absences",
+      "Dalc",
+      "Walc",
+      "health"
+    ]
+  },
+  "features": {
+    "address": {
+      "type": "categorical",
+      "options": [
+        "R",
+        "U"
+      ],
+      "default": "U"
+    },
+    "Medu": {
+      "type": "numeric",
+      "min": 0,
+      "max": 4,
+      "default": 2
+    },
+    "Mjob": {
+      "type": "categorical",
+      "options": [
+        "at_home",
+        "health",
+        "other",
+        "services",
+        "teacher"
+      ],
+      "default": "other"
+    },
+    "Fjob": {
+      "type": "categorical",
+      "options": [
+        "at_home",
+        "health",
+        "other",
+        "services",
+        "teacher"
+      ],
+      "default": "other"
+    },
+    "guardian": {
+      "type": "categorical",
+      "options": [
+        "father",
+        "mother",
+        "other"
+      ],
+      "default": "mother"
+    },
+    "G1": {
+      "type": "numeric",
+      "min": 0,
+      "max": 19,
+      "default": 11
+    },
+    "G2": {
+      "type": "numeric",
+      "min": 0,
+      "max": 19,
+      "default": 11
+    },
+    "failures": {
+      "type": "numeric",
+      "min": 0,
+      "max": 3,
+      "default": 0
+    },
+    "schoolsup": {
+      "type": "categorical",
+      "options": [
+        "no",
+        "yes"
+      ],
+      "default": "no"
+    },
+    "higher": {
+      "type": "categorical",
+      "options": [
+        "no",
+        "yes"
+      ],
+      "default": "yes"
+    },
+    "famrel": {
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 4
+    },
+    "freetime": {
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 3
+    },
+    "goout": {
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 3
+    },
+    "activities": {
+      "type": "categorical",
+      "options": [
+        "no",
+        "yes"
+      ],
+      "default": "no"
+    },
+    "internet": {
+      "type": "categorical",
+      "options": [
+        "no",
+        "yes"
+      ],
+      "default": "yes"
+    },
+    "studytime": {
+      "type": "numeric",
+      "min": 1,
+      "max": 4,
+      "default": 2
+    },
+    "absences": {
+      "type": "numeric",
+      "min": 0,
+      "max": 30,
+      "default": 2
+    },
+    "Dalc": {
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 1
+    },
+    "Walc": {
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 2
+    },
+    "health": {
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 4
+    }
+  },
+  "best_params": {
+    "n_layers": 2,
+    "units": 64,
+    "dropout": 0.1,
+    "lr": 0.01,
+    "batch_size": 64
+  },
+  "subject": "por",
+  "n_train": 454,
+  "test_metrics": [
+    {
+      "Model": "Deep Neural Network",
+      "Accuracy": 0.8878,
+      "Precision": 0.8783,
+      "Recall": 0.8399,
+      "F1-score": 0.8574
+    },
+    {
+      "Model": "Random Forest",
+      "Accuracy": 0.8673,
+      "Precision": 0.8559,
+      "Recall": 0.7899,
+      "F1-score": 0.8136
+    },
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 0.8061,
+      "Precision": 0.7501,
+      "Recall": 0.7921,
+      "F1-score": 0.7684
+    }
+  ]
+}

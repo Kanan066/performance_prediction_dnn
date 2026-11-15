@@ -1,0 +1,4 @@
+Model,Accuracy,Precision,Recall,F1-score
+Deep Neural Network,0.8878,0.8783,0.8399,0.8574
+Random Forest,0.8673,0.8559,0.7899,0.8136
+Logistic Regression,0.8061,0.7501,0.7921,0.7684
